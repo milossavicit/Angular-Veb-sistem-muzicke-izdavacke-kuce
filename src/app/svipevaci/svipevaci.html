@@ -1,0 +1,56 @@
+<html>
+<body>
+  <br>
+  <br>
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+  <div class="panel panel-login">
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-lg-12">
+<form class="" role="search">
+  <h2>Pretraga: </h2>
+ <div class="form-group">
+	<input type="text" class="form-control" placeholder="Broj albuma" name="name" [(ngModel)]="name">
+ </div>
+</form>
+ <div class="form-group">
+	<input type="text" class="form-control" placeholder="Broj spotova" name="name1" [(ngModel)]="name1">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="app flex-row align-items-center">
+    <div class="container">
+        <div class="card-deck row">
+          <div class="container">
+<div class="col-lg-12">
+  <div style="color:#ffeaea; font-size:25px;">
+Sobe: <br>
+</div>
+</div>
+</div>
+<div class="col-lg-12">
+  <!-- Sortiranje se vrsi po krevetima pa po kvadratima -->
+  <div class="card col-md-3" *ngFor="let korisnik of data | SearchPipe:name | SearchPipe1:name1"><br/>
+    <div class="jumbotron"  style="padding:5px 5px 5px 5px; width:200px; height:130px; font-size:14px;background-color:#eaecef; color:#343538;">
+    <br>
+    ID: {{korisnik.id}}
+    <br/> Ime pevača: {{korisnik.ime}}
+    <br/> Broj albuma: {{korisnik.brojAlbuma}}<br/>
+    Broj spotova: {{korisnik.brojSpotova}}
+    <br/> <br/>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

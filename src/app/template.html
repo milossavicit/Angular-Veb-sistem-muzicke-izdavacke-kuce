@@ -1,0 +1,47 @@
+<nav class="navbar navbar-inverse navbar-static-top navigacija">
+   <div class="container-fluid">
+     <div class="navbar-header">
+       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigacija">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
+       <a class="navbar-brand text-hide" href="#">Brand Text</a>
+     </div>
+
+     <div id="navigacija" class="navbar-collapse collapse">
+       <ul class="nav navbar-nav navbar-left">
+         <li routerLink="/" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active"><a routerLink="/">Početna</a></li>
+         <li *ngIf="isAuth == 'yes' || isAuthAdmin == 'yes'"><a [routerLink]="['./svipevaci']">Pretraga</a></li>
+
+         <li *ngIf="isAuth == 'no' && isAuthAdmin == 'yes'" class="dropdown">
+                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Izmene <span class="caret"></span></a>
+                   <ul class="dropdown-menu">
+                     <li *ngIf="isAuth == 'no' && isAuthAdmin == 'yes'"><a [routerLink]="['./dodajpevaca']">Dodaj pevaca</a></li>
+                     <li *ngIf="isAuth == 'no' && isAuthAdmin == 'yes'"><a [routerLink]="['./dodajproducenta']">Dodaj producenta</a></li>
+                     <li *ngIf="isAuth == 'no' && isAuthAdmin == 'yes'" role="separator" class="divider"></li>
+                     <li *ngIf="isAuth == 'no' && isAuthAdmin == 'yes'"><a [routerLink]="['./obrisipevaca']">Obriši pevača</a></li>
+                     <li *ngIf="isAuth == 'no' && isAuthAdmin == 'yes'"><a [routerLink]="['./obrisiproducenta']">Obriši producenta</a></li>
+                     <!--<li role="separator" class="divider"></li>
+                     <li><a href="#">Separated link</a></li>-->
+                   </ul>
+                 </li>
+
+         <li routerLink="/aboutus" routerLinkActive="active"><a routerLink="/aboutus">O nama</a></li>
+
+   </ul>
+
+
+
+       <ul class="nav navbar-nav navbar-right">
+                       <li *ngIf="isAuth == 'no' && isAuthAdmin == 'no'" routerLink="/register" routerLinkActive="active"><a routerLink="/register">Registracija</a></li>
+                       <li *ngIf="isAuth == 'no' && isAuthAdmin == 'no'" routerLink="/login" routerLinkActive="active"><a routerLink="/login">Login</a></li>
+                       <li *ngIf="isAuth == 'yes' || isAuthAdmin == 'yes'" ><a (click)="onLogout()">Log out</a></li>
+       </ul>
+     </div>
+   </div>
+ </nav>
+<div class="container-fluid">
+<router-outlet></router-outlet>
+</div>

@@ -1,0 +1,37 @@
+<body>
+  <br>
+  <br>
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+  <div class="panel panel-login">
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-lg-12">
+<form id="login-form" role="form" [formGroup]="loginForm" style="display: block;">
+<h2>LOGIN</h2>
+  <div class="alert alert-danger" style="display: none;">
+  </div>
+  <div class="form-group">
+    <input type="text" name="username" id="username" tabindex="1" class="form-control" formControlName='username' placeholder="Username">
+  </div>
+  <div class="form-group">
+    <input type="password" name="password" id="password" tabindex="1" class="form-control" formControlName='password' placeholder="Password">
+  </div>
+
+  <div class="form-group">
+      <input id="checkboxOneInput"  type="checkbox" formControlName='checkbox' name="">
+      <label for="checkboxOneInput">Čekirajte ako ste admin</label>
+</div>
+  <div class="col-xs-6 form-group pull-right">
+  <button (click)="onLogin()" class="form-control btn btn-default btn-login">Login</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>

@@ -1,0 +1,40 @@
+body {
+  background: url(../img/pozadina.jpg) no-repeat center center fixed; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  }
+
+	@media only screen and (max-width : 768px){
+ .navbar-brand {
+  padding: 0px;
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+}
+  .navbar-brand>img {
+  height: 100%;
+  width: auto;
+  padding: 7px 14px;
+}
+}
+
+  .navbar-brand {
+  background: url("../img/logo.png") center / contain no-repeat;
+  width: 200px;
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+}
+.col-lg-12 {
+    text-align:center;
+    color: #f2f2f2;
+    padding: 50px;
+}
+.col-lg-4 {
+    text-align:center;
+    color: #f2f2f2;
+    padding-top: 20%;
+}

@@ -1,0 +1,37 @@
+<html>
+<body>
+  <br>
+  <br>
+      <div class="container">
+      <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-login">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-12">
+    <form  role="search">
+      <h2>IZMENI PRODUCENTA</h2>
+      <div class="form-group">
+        <div class="form-group">
+        <input type="text" class="form-control" placeholder="Ime producenta" name="ime" [(ngModel)]="ime">
+      </div>
+        <div class="form-group">
+        <input type="text" class="form-control" placeholder="Prezime producenta" name="prezime" [(ngModel)]="prezime">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Broj urađenih pesama" name="brojPesama" [(ngModel)]="brojPesama">
+      </div>
+      </div>
+    <div class="col-xs-6 form-group pull-right">
+    <button class="form-control btn btn-login" (click)="onEdit()">Izmeni</button>
+  </div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

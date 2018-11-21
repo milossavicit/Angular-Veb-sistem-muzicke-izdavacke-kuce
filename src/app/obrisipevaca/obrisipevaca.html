@@ -1,0 +1,32 @@
+<body>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+  <div class="col-md-6 col-md-offset-3">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="text-align: center">ID</th>
+            <th style="text-align: center">Ime</th>
+            <th style="text-align: center">Broj albuma</th>
+            <th style="text-align: center">Broj spotova</th>
+        </tr>
+	</thead>
+	<tbody>
+        <ng-container  *ngFor="let pevac of data">
+            <tr>
+                <td style="text-align: center">{{pevac.id}}</td>
+                <td style="text-align: center">{{pevac.ime}}</td>
+                <td style="text-align: center">{{pevac.brojAlbuma}}</td>
+                <td style="text-align: center">{{pevac.brojSpotova}}</td>
+                <td><button class="btn btn-default" (click)="izmeniPevaca(pevac.id)">Izmeni</button></td>
+                <td><button class="btn btn-danger" (click)="izbrisiPevaca($event, pevac.id)">Izbriši</button></td>
+
+            </tr>
+        </ng-container>
+	</tbody>
+</table>
+</div>
+</div>
+</body>
